@@ -6,7 +6,7 @@ RUN apk add --no-cache coreutils openssl openssh curl git vim sudo
 
 # シェル関連
 RUN apk add --no-cache bash
-COPY .bash_profile /root/.bash_profile
+COPY tmpl/.bash_profile /root/.bash_profile
 
 # ユーザ関連
 RUN echo 'root:root' | chpasswd
